@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_curve_16_4_16_4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_padding16"
+        android:padding="@dimen/_padding24">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MyTheme.Manrope_Regular_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lineHeight="@dimen/_padding18"
+            android:text="@string/comment1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextAppearance.MyTheme.SemiBold_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_padding8"
+            android:layout_above="@id/txtCity"
+            android:text="@string/comment1_user" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCity"
+            style="@style/TextAppearance.MyTheme.Manrope_Regular_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/comment1_city" />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

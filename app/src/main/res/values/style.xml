@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/gray_ef</item>
+        <item name="colorPrimaryDark">@color/gray_ef</item>
+        <item name="colorAccent">@color/gray_ef</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.SemiBold_14" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Lexend_SemiBold_14" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Lexend_SemiBold_20" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_extra_heavy</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Lexend_SemiBold_24" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Lexend_SemiBold_12" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:fontFamily">@font/lexend_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <style name="TextAppearance.MyTheme.Bold_12" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.SemiBold_10" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/gray_5D5D5D</item>
+        <item name="fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_extra_tiny</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.SemiBold_16" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:fontFamily">@font/manrope_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Manrope_Regular_12" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Manrope_Bold_12" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Manrope_Regular_14" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Manrope_Regular_18" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">@dimen/text_size_heavy</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Regular_8" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/gray_5D5D5D</item>
+        <item name="fontFamily">@font/manrope_regular</item>
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">@dimen/text_size_double_extra_tiny_8</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.MyTheme.Regular_22" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/black_19</item>
+        <item name="fontFamily">@font/bebas_neue_regular</item>
+        <item name="android:fontFamily">@font/bebas_neue_regular</item>
+        <item name="android:textSize">@dimen/text_size_22</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    // Shape
+    <style name="Shape_TL_BR">
+        <item name="cornerFamily">rounded</item>
+
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">4dp</item>
+
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">4dp</item>
+    </style>
+
+    <style name="Shape_All_8">
+        <item name="cornerFamily">rounded</item>
+
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeTopRight">8dp</item>
+
+        <item name="cornerSizeBottomRight">8dp</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
+    </style>
+
+    <style name="Shape_All_16_4">
+        <item name="cornerFamily">rounded</item>
+
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">4dp</item>
+
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeBottomLeft">4dp</item>
+    </style>
+
+    <style name="BottomNavIndicator">
+        <item name="android:color">@color/green_76B858</item>
+        <item name="android:height">3dp</item>
+        <item name="android:shape">rectangle</item>
+    </style>
+
+</resources>

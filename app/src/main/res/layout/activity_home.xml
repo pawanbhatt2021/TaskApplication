@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.main.HomeActivity"
+    android:background="@color/gray_ef"
+    android:paddingTop="@dimen/_padding40">
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/frameLayoutHome"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bnv"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:defaultNavHost="true"
+        android:saveEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/navIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/home_navigation_graph" />
+
+    <View
+        android:id="@+id/navIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="top"
+        android:background="@color/green_76B858"
+        app:layout_constraintBottom_toTopOf="@+id/bnv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="@dimen/_padding4"
+        app:elevation="@dimen/_padding4"
+        app:itemIconTint="@color/bottom_nav_state"
+        app:itemTextAppearanceActive="@style/TextAppearance.MyTheme.Manrope_Bold_12"
+        app:itemTextAppearanceInactive="@style/TextAppearance.MyTheme.Manrope_Bold_12"
+        app:itemTextColor="@color/bottom_nav_text_state"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@null"
+        app:itemRippleColor="@null"
+        app:itemActiveIndicatorStyle="@null"
+        app:navGraph="@navigation/home_navigation_graph"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

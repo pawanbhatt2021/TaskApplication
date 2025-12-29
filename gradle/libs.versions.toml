@@ -1,0 +1,68 @@
+[versions]
+agp = "8.9.3"
+kotlin = "2.1.0"
+coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+activity = "1.12.2"
+constraintlayout = "2.2.1"
+imageview = "3.1.0"
+dotIndicator = "5.1.0"
+navigationFragmentKtx = "2.9.6"
+navigationUiKtx = "2.9.6"
+gson = "2.13.2"
+retrofit = "3.0.0"
+okhttp = "5.1.0"
+coroutines-android = "1.10.2"
+viewmodel-ktx = "2.8.7"
+hilt = "2.57.2"
+glide = "5.0.5"
+coil = "2.5.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# circular
+circular-imageview = {group = "de.hdodenhof", name = "circleimageview", version.ref = "imageview"}
+# dot indicator
+dot-indicator = {group = "com.tbuonomo", name = "dotsindicator",version.ref = "dotIndicator"}
+#nav compnonents
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+
+coroutines-android = {group = "org.jetbrains.kotlinx",name = "kotlinx-coroutines-android",version.ref="coroutines-android"}
+viewmodel-ktx = {group =  "androidx.lifecycle",name="lifecycle-viewmodel-ktx",version.ref="viewmodel-ktx"}
+gson = {group = "com.google.code.gson",name = "gson",version.ref = "gson"}
+retrofit = {group = "com.squareup.retrofit2",name = "retrofit", version.ref = "retrofit"}
+okhttp = {group = "com.squareup.okhttp3",name="logging-interceptor",version.ref="okhttp"}
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+retrofit-rxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofit" }
+
+hilt-android = {group = "com.google.dagger",name="hilt-android",version.ref="hilt"}
+hilt-android-compiler = {group = "com.google.dagger",name="hilt-android-compiler",version.ref="hilt"}
+
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt"}
+hilt-android-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+
+

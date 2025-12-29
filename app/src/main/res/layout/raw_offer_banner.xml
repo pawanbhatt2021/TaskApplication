@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="180dp"
+    android:background="@drawable/all_curve_offer"
+    android:layout_marginStart="@dimen/_padding16">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_padding16">
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.MyTheme.Lexend_SemiBold_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/offer_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.MyTheme.Manrope_Regular_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_padding8"
+        android:text="@string/offer_desc" />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.MyTheme.Lexend_SemiBold_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_padding16"
+        android:paddingVertical="@dimen/_padding11"
+        android:paddingHorizontal="@dimen/_padding15"
+        android:background="@drawable/all_curve_border_1_orange_f3b556"
+        android:textColor="@color/orange_CE5811"
+        android:text="Book Now" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_card"
+     android:layout_margin="@dimen/_padding8"
+        android:layout_gravity="center_vertical"
+        app:shapeAppearanceOverlay="@style/Shape_All_16_4"
+        android:scaleType="centerCrop"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

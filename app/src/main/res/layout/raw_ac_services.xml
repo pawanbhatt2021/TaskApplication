@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.taskapplication.presentation.home.model.AcServices" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_padding16">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            image="@{data.image}"
+            tools:srcCompat="@drawable/top_service_img1"
+            app:shapeAppearanceOverlay="@style/Shape_All_8"
+            android:scaleType="centerCrop" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAcServiceName"
+            style="@style/TextAppearance.MyTheme.SemiBold_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_padding8"
+            android:text="@{data.serviceName}"
+            tools:text="AC \nServcies" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_padding8">
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="1"
+                android:stepSize="1"
+                android:rating="1"
+                android:isIndicator="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:progressTint="@color/orange_EF96238"
+                android:secondaryProgressTint="@color/orange_EF96238" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtRating"
+                style="@style/TextAppearance.MyTheme.Bold_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_padding5"
+                android:text="@{data.rating}"
+                tools:text="4.5" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtReviews"
+            style="@style/TextAppearance.MyTheme.Manrope_Regular_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_padding4"
+            android:text="@{data.totalReviews}"
+            tools:text="217" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

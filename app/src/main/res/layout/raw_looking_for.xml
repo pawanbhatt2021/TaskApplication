@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="data"
+    type="com.example.taskapplication.domain.model.Category" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="89dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/_padding8"
+        android:background="@drawable/all_curve_raw_looking_for">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgService"
+            android:layout_width="@dimen/_padding40"
+            android:layout_height="@dimen/_padding40"
+            imgUrl="@{data.iconUrl}"
+            placeHolder="@{@drawable/top_service_img1}"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_padding13"
+            android:scaleType="centerCrop" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtName"
+            style="@style/TextAppearance.MyTheme.SemiBold_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_padding16"
+            tools:text="Essential"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            app:lineHeight="10dp"
+            android:includeFontPadding="false"
+            android:text="@{data.name}"
+            android:maxLines="2"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/txtLocation"
+            app:layout_constraintTop_toBottomOf="@id/txtLocation" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

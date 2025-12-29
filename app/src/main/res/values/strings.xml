@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TaskApplication</string>
+    <string name="search">Search</string>
+    <string name="temAddress">Villa 27, Jumeirah Park District 5, Dubai, UAE</string>
+    <string name="tempLocation">Tariaq Bedon</string>
+    <string name="offer_title">Instant \nHome Services</string>
+    <string name="offer_desc">Immediate help for home \nemergencies—quick, reliable, \nand professional.</string>
+    <string name="comment1"><b>Exceptional service</b>—my AC was fixed within an hour!</string>
+    <string name="comment1_city">Downtown Dubai</string>
+    <string name="comment1_user">Rayan M</string>
+    <string name="home">Home</string>
+    <string name="services">Services</string>
+    <string name="booking">Booking</string>
+    <string name="profile">Profile</string>
+    <string name="our_top_services">Our top services</string>
+    <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="ac_services">AC Services</string>
+    <string name="ac_water_leak_fix">AC Water \nLeak Fix</string>
+    <string name="duct_and_filter_cleaning">Duct &amp; Filter Cleaning</string>
+    <string name="ac_repair_and_installation">AC Repair &amp; Installation</string>
+    <string name="ac_services_">AC \nServices</string>
+    <string name="electrical_services">Electrical Services</string>
+    <string name="plumbing_services">Plumbing Services</string>
+    <string name="offers">Offers</string>
+    <string name="just_don_t_take_our_word_for_it">Just don\'t take our \nword for it</string>
+    <string name="need_help_fast">Need help fast?</string>
+    <string name="get_expert_help_at_your_doorstep">Get Expert Help at \nYour Doorstep</string>
+    <string name="within">Within</string>
+</resources>
