@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taskapplication.databinding.RawFeedbackBinding
 import com.example.taskapplication.presentation.common.extensions.layoutInflater
 
-class FeedbackAdapter(): RecyclerView.Adapter<FeedbackAdapter.ViewHolder>() {
+class FeedbackAdapter(
+    val listData: ArrayList<String>
+): RecyclerView.Adapter<FeedbackAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -24,7 +26,7 @@ class FeedbackAdapter(): RecyclerView.Adapter<FeedbackAdapter.ViewHolder>() {
         }
     }
 
-    override fun getItemCount(): Int = 3
+    override fun getItemCount(): Int = listData.size
 
 
     inner class  ViewHolder(val binding: RawFeedbackBinding): RecyclerView.ViewHolder(binding.root)

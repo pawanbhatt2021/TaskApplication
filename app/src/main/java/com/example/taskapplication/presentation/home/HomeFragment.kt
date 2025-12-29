@@ -1,5 +1,6 @@
 package com.example.taskapplication.presentation.home
 
+import android.R.attr.clipToPadding
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
@@ -75,7 +76,6 @@ private lateinit var feedbackPagerAdapter: FeedbackPagerAdapter
         observeCategories()
         viewModel.loadCategories()
         prepareInfiniteList()
-        setupViewPager()
         startAutoSlider()
         setupTouchListener()
 
@@ -129,40 +129,48 @@ private lateinit var feedbackPagerAdapter: FeedbackPagerAdapter
             offerAdapter.submitList(listOf("a","b","c"))
             rvOffers.adapter = offerAdapter
 
-//            feedbackAdapter = FeedbackAdapter()
-//            feedbackAdapter.submitList(listOf("a","b","c"))
-//            rvFeedBack.adapter = feedbackAdapter
+            feedbackAdapter = FeedbackAdapter(arrayListOf("a","b","c"))
+            pagerFeedBack.adapter = feedbackAdapter
 
+            (pagerFeedBack.getChildAt(0) as RecyclerView).apply {
+            clipToPadding = false
+            clipChildren = false
+        }
 
-            pagerFeedBack.adapter = FeedbackAdapter()
-            pagerFeedBack.offscreenPageLimit = 3
-
-            // RecyclerView internal fix
-//            val rv = pagerFeedBack.getChildAt(0) as RecyclerView
-//            rv.clipToPadding = false
-//            rv.clipChildren = false
-//            rv.overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-
-            // Page transformer (peek + scale)
-            pagerFeedBack.setPageTransformer { page, position ->
-                page.translationX = position * -40
-                val scale = 0.9f + (1 - kotlin.math.abs(position)) * 0.1f
-                page.scaleY = scale
+            // Peek + scale animation
+           pagerFeedBack.setPageTransformer { page, position ->
+                page.scaleY = 0.9f + (1 - kotlin.math.abs(position)) * 0.1f
             }
 
-            dotsIndicator.attachTo(pagerFeedBack)
-//            pagerFeedBack.setCurrentItem(0, false)
+            // 🔥 Attach dots (MOST IMPORTANT)
+            dotsIndicator.attachTo(binding.pagerFeedBack)
 
-            // AUTO SCROLL
-            handler = Handler(Looper.getMainLooper())
-            runnable = Runnable {
-                val next = (pagerFeedBack.currentItem + 1) % 3
-                pagerFeedBack.setCurrentItem(next, true)
-            }
-
-            handler.postDelayed(runnable, 3000)
+            autoScrollWithReset()
         }
     }
+
+    private fun autoScrollWithReset() {
+        val handler = Handler(Looper.getMainLooper())
+
+        val runnable = object : Runnable {
+            override fun run() {
+
+                val next = binding.pagerFeedBack.currentItem + 1
+
+                if (next < feedbackAdapter.listData.size) {
+                    binding.pagerFeedBack.setCurrentItem(next, true)
+                } else {
+                    // 🔁 last → first (no animation)
+                    binding.pagerFeedBack.setCurrentItem(0, false)
+                }
+
+                handler.postDelayed(this, 3000)
+            }
+        }
+
+        handler.postDelayed(runnable, 3000)
+    }
+
 
     private fun initListener(){
         with(binding){
@@ -214,40 +222,7 @@ private lateinit var feedbackPagerAdapter: FeedbackPagerAdapter
         repeat(3) { infiniteList.addAll(originalList) }
     }
 
-    private fun setupViewPager() {
-        val adapter = FeedbackAdapter()
-        binding.pagerFeedBack.adapter = adapter
-        binding.pagerFeedBack.offscreenPageLimit = 3
 
-        // Start from middle to allow infinite scroll both sides
-        val startPosition = originalList.size
-        binding.pagerFeedBack.setCurrentItem(startPosition, false)
-
-        // DotsIndicator attach
-        binding.dotsIndicator.attachTo(binding.pagerFeedBack)
-
-        // Infinite scroll logic
-        binding.pagerFeedBack.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageScrollStateChanged(state: Int) {
-                if (state == ViewPager2.SCROLL_STATE_IDLE) {
-                    val pos = binding.pagerFeedBack.currentItem
-                    when {
-                        pos < originalList.size -> {
-                            binding.pagerFeedBack.setCurrentItem(pos + originalList.size, false)
-                        }
-                        pos >= originalList.size * 2 -> {
-                            binding.pagerFeedBack.setCurrentItem(pos - originalList.size, false)
-                        }
-                    }
-                }
-            }
-
-            override fun onPageSelected(position: Int) {
-                stopAutoSlider()
-                startAutoSlider()
-            }
-        })
-    }
 
 
     @SuppressLint("ClickableViewAccessibility")

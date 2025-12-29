@@ -331,6 +331,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginBottom="@dimen/_padding30"
                 android:clipToPadding="false"
+                android:paddingEnd="120dp"
                 android:clipChildren="false"
                 android:layout_marginStart="@dimen/_padding16"
                 android:overScrollMode="never"
@@ -350,7 +351,15 @@
                 android:layout_marginTop="@dimen/_padding24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/pagerFeedBack"/>
+                app:layout_constraintTop_toBottomOf="@id/pagerFeedBack"
+                app:layout_constraintBottom_toTopOf="@id/viewBottom"/>
+
+            <View
+                android:id="@+id/viewBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_padding20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
