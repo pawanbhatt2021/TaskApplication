@@ -86,31 +86,21 @@ private lateinit var feedbackPagerAdapter: FeedbackPagerAdapter
         viewModel.categories.observe(viewLifecycleOwner) { result ->
             when (result) {
                 is ApiResult.Loading -> {
-                    showLoading()
+
                 }
 
                 is ApiResult.Success -> {
                     lookingForAdapter.submitList(result.data)
-                    showCategoryList(result.data)
+
                 }
 
                 is ApiResult.Error -> {
-                    showError(result.message)
+
                 }
             }
         }
     }
-    private fun showLoading() {
-        Log.e("pawanLogs","loading  = ")
-    }
 
-    private fun showCategoryList(list: List<Category>) {
-        Log.e("pawanLogs","list  = ${Gson().toJson(list)}")
-    }
-
-    private fun showError(message: String) {
-        Log.e("pawanLogs","message   = $message")
-    }
 
     private fun initViews(){
         with(binding){
@@ -137,12 +127,10 @@ private lateinit var feedbackPagerAdapter: FeedbackPagerAdapter
             clipChildren = false
         }
 
-            // Peek + scale animation
            pagerFeedBack.setPageTransformer { page, position ->
                 page.scaleY = 0.9f + (1 - kotlin.math.abs(position)) * 0.1f
             }
 
-            // 🔥 Attach dots (MOST IMPORTANT)
             dotsIndicator.attachTo(binding.pagerFeedBack)
 
             autoScrollWithReset()
